@@ -1,5 +1,7 @@
 local map = require("helpers.keys").map
 
+local cfg = vim.fn.stdpath("config")
+
 -- Blazingly fast way out of insert mode
 map("i", "jk", "<esc>")
 
@@ -10,6 +12,7 @@ map("n", "<leader>qq", "<cmd>q<cr>", "Quit")
 map("n", "<leader>qa", "<cmd>qa!<cr>", "Quit all")
 map("n", "<leader>dw", "<cmd>close<cr>", "Window")
 map("n", "<leader>t", "<cmd>term<cr>", "New Terminal")
+map("n", "<leader>c", "<cmd>cd " .. cfg .. "<cr>", "Open Config")
 
 -- Diagnostic keymaps
 map('n', 'gx', vim.diagnostic.open_float, "Show diagnostics under cursor")

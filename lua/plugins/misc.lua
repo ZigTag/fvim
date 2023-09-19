@@ -37,5 +37,8 @@ return {
 			require('leap').add_default_mappings()
 		end
 	},
-	"stevearc/dressing.nvim",
+	{
+		"stevearc/dressing.nvim",
+		opts = {},
+	}
 }
